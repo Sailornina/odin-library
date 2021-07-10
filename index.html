@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+<script src="script.js"></script>
+    <header>
+        <div id="page-title"><i class="fas fa-book-open"></i>
+        <h1>The library</h1>
+        </div>
+
+    </header>
+    <main>
+        <div id ="page-wrapper">
+            <h2>Add a new book</h2>
+            <form id="add-book">
+                <label for="title" class="books">Title</label>
+                <input class="form-item" type="text" name="title" id="title" placeholder="Title">
+                <label for="author" class="books">Author</label>
+                <input class="form-item" type="text" name="author" id="author" placeholder="Author">
+                <label for="pages" class="books">Pages</label>
+                <input class="form-item" type="text" name="pages" id="pages" placeholder="Pages">
+                <div class="form-item checkbox-container">
+                    <label class="switch"><input class="switch-input" type="checkbox" name="read" id="read"><i
+                        class="slider round"></i></label>
+                    <p id="is-read">read?</p>
+                </div>
+                <button class="form-item" type="submit">Add</button>
+            </form>
+          </div id="available-book" class="container">
+               <h2>Available books</h2>
+         <div id="books-tiles-container"></div>
+        <div>
+
+        </div>
+    </main>
+    
+</body>
+</html>

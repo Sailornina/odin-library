@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Shadows+Into+Light&display=swap');
+:root {
+  --main-salmon-pink: #D2AB99;
+  --main-frensh-grey: #BDBEA9;
+  --main-sap-green-light: #8DB38B;
+  --main-peacok-green: #56876D;
+  --main-sepia: #04724D;
+}
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+font-family: 'Dosis', sans-serif;
+font-family: 'Shadows Into Light', 'cursive';
+color: black;
+background-color: var(--main-salmon-pink);
+}
+
+#page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: var(--main-frensh-grey);
+    padding: 20px, 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+#page-wrapper {
+    
+}
+
