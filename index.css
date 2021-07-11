@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Shadows+Into+Light&display=swap');
 :root {
-  --main-salmon-pink: #D2AB99;
-  --main-frensh-grey: #BDBEA9;
-  --main-sap-green-light: #8DB38B;
-  --main-peacok-green: #56876D;
-  --main-sepia: #04724D;
+    --main-salmon-pink: #D2AB99;
+    --main-frensh-grey: #BDBEA9;
+    --main-sap-green-light: #8DB38B;
+    --main-peacok-green: #56876D;
+    --main-sepia: #04724D;
 }
 
 html {
     box-sizing: border-box;
 }
-*,
-*:before,
-*:after {
+
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
 body {
-font-family: 'Dosis', sans-serif;
-font-family: 'Shadows Into Light', 'cursive';
-color: black;
-background-color: var(--main-salmon-pink);
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Shadows Into Light', 'cursive';
+    color: black;
+    background-color: var(--main-salmon-pink);
+    margin: 0;
 }
 
 #page-title {
@@ -29,10 +29,96 @@ background-color: var(--main-salmon-pink);
     align-items: center;
     margin: 0;
     background-color: var(--main-frensh-grey);
-    padding: 20px, 0;
+    padding: 20px 0;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #page-wrapper {
+    background-color: var(--main-sap-green-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 15px;
 }
+
+#page-container-books {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    padding: 20px 0 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 85%;
+}
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+#add-book {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.form-item {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: lemonchiffon;
+}
+
+imput {
+
+
+}
+
+imput::placeholder {
+
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#is-read {
+    margin: 0 0 0 10px;
+}
+
+button[type="submit"] {
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Shadows Into Light', 'cursive';
+    background-color: var(--main-sepia);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#available-book {
+    background-color: var(--main-peacok-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+
+
