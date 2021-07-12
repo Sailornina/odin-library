@@ -100,10 +100,9 @@ imput::placeholder {
 
 #is-read {
     margin: 0 0 0 10px;
-    margin-top: 15px;
 }
 
-button[type="submit"] {
+button[type="button"] {
     font-family: 'Dosis', sans-serif;
     font-family: 'Shadows Into Light', 'cursive';
     background-color: var(--main-sepia);
@@ -111,6 +110,7 @@ button[type="submit"] {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 15px;
 }
 
 #available-book {
@@ -121,5 +121,9 @@ button[type="submit"] {
     width: 50%;
 }
 
-
+#books-tiles-container {
+    background-color: var(--main-sepia);
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
