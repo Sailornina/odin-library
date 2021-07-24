@@ -37,8 +37,34 @@ if (!localStorage.getItem('BOOK_COLLECTION_KEY')) {
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    let booksContainer = document.getElementById("books-tiles-container");
 
+    const booksContainer = document.getElementById('books-tiles-container');
+
+
+    const fragment = document.createDocumentFragment()
     
+    bookCollection.forEach((book, i) => {
+
+        const bookTile = document.createElement('div')
+        bookTile.classList.add('book-tile')
+        fragment.appendChild(bookTile)
+
+        const title = document.createElement('p')
+        title.innerText = book.title
+        fragment.appendChild(title)
+
+        const author = document.createElement('p')
+        author.innerText = book.author
+        fragment.appendChild(author)
+
+        const pages = document.createElement('p')
+        pages.innerText = book.pages
+        fragment.appendChild(pages)
+    
+    });
+    
+    booksContainer.appendChild(fragment)
+
+   
 });
 
