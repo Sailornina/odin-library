@@ -33,6 +33,7 @@ if (!localStorage.getItem('BOOK_COLLECTION_KEY')) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+
     const booksContainer = document.getElementById('books-tiles-container');
 
     const fragment = document.createDocumentFragment()
@@ -53,8 +54,42 @@ window.addEventListener('DOMContentLoaded', () => {
         const pages = document.createElement('p')
         pages.innerText = book.pages
         fragment.appendChild(pages)
+
+        bookTile.dataset.index = i;
+
+        const containerControl = document.createElement('div')
+        containerControl.classList.add('control-book')
+        fragment.appendChild(containerControl)
+
+        const isRead = book.isRead
+        const toggleStatus = toggleSwitchRead(isRead)
+        containerControl.classList.add(toggleStatus)
+
+        
+        isRead = () => {
+            if (book.isRead === isRead) {
+                bookTile.classList.add('read')
+            }
+        } else {
+            bookTile.classList.remove('read')
+        };
+
+        const deleteContainerBook = deleteSwitch()
+        fragment.appendChild(deleteContainerBook)
+
     });
 
     booksContainer.appendChild(fragment)
+    
+
 });
 
+function toggleSwitchRead(isRead) {
+
+
+}
+
+
+function deleteSwitch() {
+
+} 
