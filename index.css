@@ -182,9 +182,40 @@ button[type="button"] {
     width: 50%;
 }
 
+/*BooksContainer*/
+
 #books-tiles-container {
-    background-color: var(--main-sepia);
+    background-color: var(--main-salmon-pink);
+    margin: 15px;
     padding-left: 15px;
     padding-right: 15px;
+    border-radius: 10px;
 }
 
+.book-tile {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    font-size: 15px;
+    background-color: violet;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+
+.book-tile > p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.book-tile > p:first-child {
+    font-style: italic;
+}
+
+.control-book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
