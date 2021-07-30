@@ -1,3 +1,4 @@
+const library = [];
 function Book(title, author, pages, isRead) {
     this.title = title;
     this.author = author;
@@ -61,13 +62,36 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const containerControl = document.createElement('div');
         containerControl.classList.add('control-book');
-        bookTile.appendChild(containerControl);;
+        bookTile.appendChild(containerControl);
 
         const isRead = book.isRead;
         bookTile.appendChild(containerControl);
+
+        const label = document.createElement('label');
+        label.classList.add('switch');
+
+        const toggle = document.createElement('input');
+        toggle.classList.add('switch-input');
+        toggle.checked = book.isRead;
+        toggle.type = 'checkbox';
+        toggle.name = 'read'
+        toggle.setAttribute('type', 'checkbox');
+        toggle.addEventListener('change', (e) => {
+            book.toggleReadStatus();
+            updateStorage();
+        });
+        label.appendChild(toggle);
+
+        const span = document.createElement('span');
+        span.classList.add('slider');
+        span.classList.add('round');
+        label.appendChild(span);
+
+        bookTile.appendChild(label);
+
+        booksContainer.appendChild(fragment);
+
+
     });
-
-    booksContainer.appendChild(fragment);
-
 
 });

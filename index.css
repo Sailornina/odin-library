@@ -195,8 +195,7 @@ button[type="button"] {
 .book-tile {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
-    font-size: 15px;
+    font-size: 18px;
     background-color: violet;
     margin: 15px;
     padding-left: 15px;
