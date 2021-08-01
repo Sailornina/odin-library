@@ -1,4 +1,3 @@
-const library = [];
 function Book(title, author, pages, isRead) {
     this.title = title;
     this.author = author;
@@ -34,6 +33,15 @@ if (!localStorage.getItem('BOOK_COLLECTION_KEY')) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+
+    const bookForm = document.getElementById('add-book-form');
+    
+    bookForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const { title, author, pages, read} = e.currentTarget.elements;
+        addBook(title.value, author.value, parseInt(pages.value), read.value === 'on');
+    });
+
 
     // Book-Card
     const booksContainer = document.getElementById('books-tiles-container');
@@ -90,7 +98,6 @@ window.addEventListener('DOMContentLoaded', () => {
         bookTile.appendChild(label);
 
         booksContainer.appendChild(fragment);
-
 
     });
 
