@@ -55,6 +55,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+
 }
 
 .container-control {
@@ -194,6 +195,11 @@ imput::placeholder {
     flex-direction: column;
     align-items: center;
     width: 50%;
+    border-radius: 10px;
+    margin-top: 15px;
+    /*flex-direction:row;
+    flex-wrap:wrap;
+   justify-content:space-around;*/
 }
 
 /*BooksContainer*/

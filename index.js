@@ -107,6 +107,26 @@ function createBookTile(book, i) {
     label.appendChild(span);
 
     bookTile.appendChild(label);
-
+    const deleteButton = createDeleteButton(book, bookTile);
+    bookTile.appendChild(deleteButton);
     return bookTile;
 }
+
+function createDeleteButton(book, bookTile) {
+    const deleteBook = document.createElement('i');
+    deleteBook.classList.add('fas');
+    deleteBook.classList.add('fa-trash-alt');
+    deleteBook.addEventListener('click', (e) => {
+        const index = bookCollection.indexOf(book);
+        bookCollection.splice(index, 1);
+        updateStorage();
+        bookTile.remove();
+    
+    });
+
+    return deleteBook;
+};
+
+
+
+
