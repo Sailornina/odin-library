@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     bookForm.addEventListener('submit', e => {
         e.preventDefault();
-        const { title, author, pages, read} = e.currentTarget.elements;
+        const { title, author, pages, read } = e.currentTarget.elements;
         const book = new Book(title.value, author.value, parseInt(pages.value), read.checked);
         addBook(book);
         bookForm.reset();
@@ -54,8 +54,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const fragment = document.createDocumentFragment();
 
     bookCollection.forEach((book, i) => {
-       let bookTile = createBookTile(book, i);
-       fragment.appendChild(bookTile);
+        let bookTile = createBookTile(book, i);
+        fragment.appendChild(bookTile);
     });
 
     // This is important to prevent reloading the DOM every time we add a book
@@ -122,12 +122,8 @@ function createDeleteButton(book, bookTile) {
         bookCollection.splice(index, 1);
         updateStorage();
         bookTile.remove();
-    
+
     });
 
     return deleteBook;
 };
-
-
-
-
