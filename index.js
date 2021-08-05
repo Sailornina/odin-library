@@ -42,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const { title, author, pages, read} = e.currentTarget.elements;
         const book = new Book(title.value, author.value, parseInt(pages.value), read.checked);
         addBook(book);
+        bookForm.reset();
         let bookTile = createBookTile(book, bookCollection.length - 1)
         booksContainer.appendChild(bookTile);
     });
